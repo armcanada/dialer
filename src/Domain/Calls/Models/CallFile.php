@@ -9,6 +9,8 @@ class CallFile extends Model
     protected $connection = 'hn_admin';
     protected $primaryKey = 'Oid';
     protected $increment = false;
+    protected $table = 'CallFile';
+    protected $keyType = 'string';
 
     public static function findByName($name)
     {
