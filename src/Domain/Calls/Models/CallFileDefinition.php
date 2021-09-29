@@ -4,7 +4,7 @@ namespace Armcanada\Dialer\Domain\Calls\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CallFile extends Model
+class CallFileDefinition extends Model
 {
     protected $connection = 'hn_admin';
     protected $primaryKey = 'Oid';

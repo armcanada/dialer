@@ -2,7 +2,7 @@
 
 namespace Armcanada\Dialer\Domain\Campaigns;
 
-use Armcanada\Dialer\Domain\Calls\Models\CallFile;
+use Armcanada\Dialer\Domain\Calls\Models\CallFileDefinition;
 use Illuminate\Database\Eloquent\Model;
 
 class Campaign extends Model
@@ -19,9 +19,9 @@ class Campaign extends Model
         return self::where('Description', $description)->first();
     }
 
-    public function callFile()
+    public function callFileDefinition()
     {
-        return $this->hasOne(CallFile::class, 'CampaignID', 'DID');
+        return $this->hasOne(CallFileDefinition::class, 'CampaignID', 'DID');
     }
 
     
